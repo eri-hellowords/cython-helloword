@@ -32,10 +32,8 @@ if USE_CYTHON:
     build_exe_options['excludes'].append('module') #Убираем из ZIP и подсунем .SO
 
     extensions = [
-        Extension("module", [
-            "module.py",
-            "libmodule/__init__.py",
-            "libmodule/moduleclass.py"
+        Extension("*", [
+            "**/*.py"
             ]),
     ]
 
